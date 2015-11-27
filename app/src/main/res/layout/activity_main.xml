@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.auxgroup.edittextdemo.MainActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名："
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="93dp"
+        android:layout_marginStart="93dp"
+        android:textSize="25sp"
+        android:layout_marginTop="59dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密    码："
+        android:id="@+id/textView"
+        android:textSize="25sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="请输入用户名"
+        android:layout_above="@+id/textView"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <!--获得焦点后全选组件内所有文本内容-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:hint="请输入密码"
+        android:textColorHint="#95A1AA"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/textView"
+        android:minLines="1"
+android:maxLines="3"
+    android:layout_toEndOf="@+id/textView" />
+    <!--设置文字间隔，设置英文字母大写类型-->
+    <!--设置EditText获得焦点，同时弹出小键盘-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_pop"
+        android:textScaleX="1.5"
+android:text="设置文字间隔"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
+    <!--光标位置的控制-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_cursor"
+        android:text="光标位置的控制"
+        android:layout_below="@+id/et_pop"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <!--带表情的EditText的简单实现-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_emotion"
+        android:text="添加表情"
+        android:layout_below="@+id/et_cursor"
+        android:layout_toLeftOf="@+id/editText2"
+        android:layout_toStartOf="@+id/editText2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加表情"
+        android:id="@+id/btn_add"
+        android:layout_below="@+id/et_emotion"
+        android:layout_centerHorizontal="true" />
+
+        <com.auxgroup.edittextdemo.ClearEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_delete"
+            android:text="带删除按钮"
+            android:layout_below="@id/btn_add"
+
+          />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除文本效果"
+            android:id="@+id/btn_delete"
+            android:layout_below="@+id/et_delete"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</ScrollView>
+
+
+
+
+</RelativeLayout>
